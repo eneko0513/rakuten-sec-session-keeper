@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; padding: 12px; width: 220px; }
+    #status { margin: 8px 0; font-size: 13px; color: #555; }
+    select, button { width: 100%; padding: 6px; font-size: 14px; cursor: pointer; margin-top: 6px; }
+    #history { margin-top: 10px; font-size: 12px; }
+    #history div { padding: 2px 0; border-bottom: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <b>楽天証券セッション維持</b>
+  <div id="status">確認中...</div>
+  <select id="interval">
+    <option value="0.17">10秒 (テスト)</option>
+    <option value="5">5分</option>
+    <option value="10">10分</option>
+    <option value="15">15分</option>
+    <option value="20">20分</option>
+  </select>
+  <button id="save">💾 保存してリセット</button>
+  <button id="btn">⏸ 一時停止</button>
+  <div id="history"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

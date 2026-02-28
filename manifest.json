@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "楽天証券セッション維持",
+  "version": "1.0",
+  "description": "楽天証券のログインセッションを維持します。指定間隔ごとにページ操作を行いセッションタイムアウトを防ぎます",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["https://member.rakuten-sec.co.jp/*"],
+  "content_scripts": [{
+    "matches": ["https://member.rakuten-sec.co.jp/*"],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
